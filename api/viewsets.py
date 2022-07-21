@@ -751,7 +751,7 @@ class ReceiveItemViewset(viewsets.ModelViewSet):
                     )
 
                 print(product, "Yaratildi")
-            product1 = ProductFilial.objects.filter(ombor=True, barcode=barcode, name=valid_data.get('name'), ombor=True).order_by('id').last()
+            product1 = ProductFilial.objects.filter(ombor=True, barcode=barcode, name=valid_data.get('name')).order_by('id').last()
 
             print('Receive Item')
             ReceiveItem.objects.create(
